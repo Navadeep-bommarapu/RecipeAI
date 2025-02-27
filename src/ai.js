@@ -5,6 +5,7 @@ You are an assistant that receives a command that a user gives and suggest for t
 
 const apikey = process.env.REACT_APP_HF_ACCESS_TOKEN
 const hf = new HfInference(apikey)
+console.log(apikey)
 
 
 export async function getRecipeFromMistral(ingredientsArr) {
