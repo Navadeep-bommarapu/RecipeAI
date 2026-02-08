@@ -1,29 +1,70 @@
-This is the AI produced recipes with the user given ingredients. This application is for the chef who want the ai to be their guide 
+# RecipeAI 🍳🤖
 
-# Usage
-1️⃣ Enter the ingredients you have
-2️⃣ Click "Generate Recipe"
-3️⃣ AI suggests a recipe based on your ingredients
-4️⃣ Enjoy your meal! 🍲
+RecipeAI is a smart, AI-powered recipe generator that turns your available ingredients into delicious meals. Built with **React** and **Groq AI (Llama 3.3)**, it offers a premium cooking experience.
 
-# Project build with:
- -AI Model: Hugging Face (Mixtral-8x7B)
- -React hooks like useState, useEffect and useRef
- -HTML and CSS
- 
-# Installation & Setup:
- ## Clone the Repository:
-    git clone https://github.com/yourusername/RecipeAI.git
+![RecipeAI Demo](./public/screenshot.png) *(Add a screenshot here)*
+
+## ✨ Features
+
+-   **AI Chef**: Generates unique recipes based on your ingredients using the powerful **Llama 3.3** model.
+-   **Smart Customization**:
+    -   **Cuisine**: Choose from Indian, Italian, Chinese, Mexican, and more.
+    -   **Difficulty**: set to Easy, Medium, or Hard.
+    -   **Time**: Filter recipes by cooking time (Under 15m, 30m, 1hr).
+-   **Recipe History**: Automatically saves your recent recipes to `localStorage` so you never lose them.
+-   **Step-by-Step Instructions**: Clear, easy-to-follow cooking steps.
+-   **Nutrition Facts**: AI-estimated calories, protein, carbs, and fat for every meal.
+-   **Ingredient Suggestions**: Stuck? Let AI suggest random ingredients for you.
+-   **Premium Design**: Modern Glassmorphism UI with smooth animations.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+-   Node.js installed.
+-   A **Groq API Key** (Get one for free at [console.groq.com](https://console.groq.com)).
+
+### Installation
+
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/Navadeep-bommarapu/RecipeAI.git
     cd RecipeAI
+    ```
 
- ## Install Dependencies
+2.  **Install dependencies**:
+    ```bash
     npm install
+    ```
 
- ## Create a .env File
-    HF_ACCESS_TOKEN=your_huggingface_api_key
+3.  **Set up Environment Variables**:
+    -   Create a `.env` file in the root directory.
+    -   Add your API key:
+        ```
+        REACT_APP_GROQ_API_KEY=your_gsk_api_key_here
+        ```
 
- ## Start the App
+4.  **Run the App**:
+    ```bash
     npm start
+    ```
+    Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+## 🛠️ Built With
 
+-   **React 19** - Frontend Framework
+-   **Groq SDK** - Ultra-fast AI Inference
+-   **Llama 3.3** - LLM Model
+-   **CSS3** - Custom variables & animations
 
+## 📦 Deployment
+
+Ready to deploy to Vercel?
+
+1.  Push code to GitHub.
+2.  Import project in Vercel.
+3.  **IMPORTANT**: Add `REACT_APP_GROQ_API_KEY` in Vercel's **Environment Variables** settings.
+
+---
+
+Made with ❤️ by Navadeep

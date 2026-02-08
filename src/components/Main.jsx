@@ -56,7 +56,13 @@ export default function Main() {
     function addIngredient(formData) {
         const newIngredient = formData.get("ingredient")
         if (newIngredient) {
-            setIngredients(prev => [...prev, newIngredient])
+            // Split by space or comma, trim whitespace, and filter empty strings
+            const ingredientsToAdd = newIngredient
+                .split(/[ ,]+/) // Split by space or comma
+                .map(i => i.trim())
+                .filter(i => i.length > 0);
+
+            setIngredients(prev => [...prev, ...ingredientsToAdd])
         }
     }
 
@@ -71,6 +77,7 @@ export default function Main() {
     return (
         <main className="app-main">
             <div className="left-panel">
+                <h3>Pantry & Ingredients</h3>
                 <form action={addIngredient} className="add-ingredient-form">
                     <input
                         type="text"
@@ -98,7 +105,28 @@ export default function Main() {
                         loading={loading}
                     />
                 }
+            </div>
 
+            <div className="center-panel" ref={recipeSection}>
+                {loading && <div className="loading-spinner">Cooking up something delicious... 🍳</div>}
+
+                {!loading && recipe && (
+                    <RecipeDisplay
+                        recipe={recipe}
+                        onSave={toggleSaveRecipe}
+                        isSaved={!!saved.find(r => r.title === recipe.title)}
+                    />
+                )}
+
+                {!loading && !recipe && (
+                    <div className="placeholder-recipe">
+                        <h2>Your Personal AI Chef</h2>
+                        <p>Add ingredients on the left, customize on the right, and your recipe will appear here!</p>
+                    </div>
+                )}
+            </div>
+
+            <div className="right-panel">
                 <div className="preferences-panel">
                     <h3>Customize</h3>
                     <select value={cuisine} onChange={e => setCuisine(e.target.value)}>
@@ -131,25 +159,6 @@ export default function Main() {
                     onSelect={setRecipe}
                     onClearHistory={() => setHistory([])}
                 />
-            </div>
-
-            <div className="right-panel" ref={recipeSection}>
-                {loading && <div className="loading-spinner">Cooking up something delicious... 🍳</div>}
-
-                {!loading && recipe && (
-                    <RecipeDisplay
-                        recipe={recipe}
-                        onSave={toggleSaveRecipe}
-                        isSaved={!!saved.find(r => r.title === recipe.title)}
-                    />
-                )}
-
-                {!loading && !recipe && (
-                    <div className="placeholder-recipe">
-                        <h2>Your Personal AI Chef</h2>
-                        <p>Add ingredients, choose preferences, and let the magic happen.</p>
-                    </div>
-                )}
             </div>
         </main>
     )

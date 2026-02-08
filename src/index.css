@@ -62,7 +62,8 @@ body {
 
 /* Main Layout */
 .app-main {
-  max-width: 1400px;
+  max-width: 1600px;
+  /* Increased max-width for 3 columns */
   margin: 2rem auto;
   padding: 0 1rem;
   display: grid;
@@ -73,13 +74,17 @@ body {
 
 @media (min-width: 1024px) {
   .app-main {
-    grid-template-columns: 350px 1fr;
+    grid-template-columns: 320px 1fr 320px;
+    /* 3 Columns */
   }
 
-  .left-panel {
+  .left-panel,
+  .right-panel {
     position: sticky;
     top: 100px;
     height: fit-content;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
   }
 }
 
