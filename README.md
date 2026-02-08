@@ -1,20 +1,23 @@
 # RecipeAI 🍳🤖
 
-RecipeAI is a smart, AI-powered recipe generator that turns your available ingredients into delicious meals. Built with **React** and **Groq AI (Llama 3.3)**, it offers a premium cooking experience.
+RecipeAI is a smart, AI-powered recipe generator that turns your available ingredients into delicious meals. Built with **React** and **Groq AI (Llama 3.3)**, it offers a premium cooking experience in a responsive **3-column dashboard layout**.
 
 ![RecipeAI Demo](./public/screenshot.png) *(Add a screenshot here)*
 
 ## ✨ Features
 
 -   **AI Chef**: Generates unique recipes based on your ingredients using the powerful **Llama 3.3** model.
--   **Smart Customization**:
+-   **Smart Pantry**: 
+    -   Add multiple ingredients at once (separated by spaces or commas). 
+    -   Example: `tomato pasta garlic` adds all three instantly.
+    -   **Ingredient Suggestions**: Stuck? Let AI suggest random ingredients for you.
+-   **Recipe History**: Automatically saves your recent recipes to `localStorage` so you never lose them.
+-   **Customize Your Meal**:
     -   **Cuisine**: Choose from Indian, Italian, Chinese, Mexican, and more.
     -   **Difficulty**: set to Easy, Medium, or Hard.
     -   **Time**: Filter recipes by cooking time (Under 15m, 30m, 1hr).
--   **Recipe History**: Automatically saves your recent recipes to `localStorage` so you never lose them.
 -   **Step-by-Step Instructions**: Clear, easy-to-follow cooking steps.
 -   **Nutrition Facts**: AI-estimated calories, protein, carbs, and fat for every meal.
--   **Ingredient Suggestions**: Stuck? Let AI suggest random ingredients for you.
 -   **Premium Design**: Modern Glassmorphism UI with smooth animations.
 
 ## 🚀 Getting Started
@@ -67,4 +70,3 @@ Ready to deploy to Vercel?
 
 ---
 
-Made with ❤️ by Navadeep
