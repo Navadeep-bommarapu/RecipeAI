@@ -2,7 +2,6 @@
 
 RecipeAI is a smart, AI-powered recipe generator that turns your available ingredients into delicious meals. Built with **React** and **Groq AI (Llama 3.3)**, it offers a premium cooking experience in a responsive **3-column dashboard layout**.
 
-![RecipeAI Demo](./public/screenshot.png) *(Add a screenshot here)*
 
 ## ✨ Features
 
@@ -59,14 +58,6 @@ RecipeAI is a smart, AI-powered recipe generator that turns your available ingre
 -   **Groq SDK** - Ultra-fast AI Inference
 -   **Llama 3.3** - LLM Model
 -   **CSS3** - Custom variables & animations
-
-## 📦 Deployment
-
-Ready to deploy to Vercel?
-
-1.  Push code to GitHub.
-2.  Import project in Vercel.
-3.  **IMPORTANT**: Add `REACT_APP_GROQ_API_KEY` in Vercel's **Environment Variables** settings.
 
 ---
 
